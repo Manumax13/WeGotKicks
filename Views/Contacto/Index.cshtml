@@ -1,0 +1,61 @@
+@model WeGotKicks.Models.Contacto;
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="~/css/contacto.css" asp-append-version="true" />
+  <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani&family=Sacramento&display=swap" rel="stylesheet">
+  <title>Contacto</title>
+</head>
+
+<body class="cuerpo">
+  <div class="titulo">
+    <p class="titulo-texto">Envianos un Mensaje</p>
+  </div>
+
+  <div class="card" style="width: 40%; margin: 30px auto 120px; border-radius: 30px; padding: 0px 10px; 
+  border: #0d023c 2px solid; background-color: #7361c3;">
+    <div class="card-body">
+      <form asp-controller="Contacto" asp-action="Create" class="topBefore">
+
+        <div class="mb-3 row" style="padding-bottom: 10px;">
+          <label asp-for="Name" class="control-label"style="font-weight:bold;"></label>
+          <input asp-for="Name" class="form-control rounded-pill" type="text" placeholder="Escribe tu nombre"
+            style="border: #0d023c 2px solid;" />
+        </div>
+
+        <div class="mb-3 row" style="padding-bottom: 10px;">
+          <label asp-for="Email" class="control-label"style="font-weight:bold;"></label>
+          <input asp-for="Email" class="form-control rounded-pill" type="text" placeholder="Escribe tu email"
+            style="border: #0d023c 2px solid;" />
+        </div>
+
+        <div class="mb-3 row" style="padding-bottom: 10px;">
+          <label asp-for="Subject" class="control-label"style="font-weight:bold;"></label>
+          <input asp-for="Subject" class="form-control rounded-pill" type="text" placeholder="Escribe la tematica"
+            style="border: #0d023c 2px solid;" />
+        </div>
+
+
+        <div class="mb-3 row" style="padding-bottom: 40px;">
+          <label asp-for="Comment" class="control-label"style="font-weight:bold;"></label>
+          <input asp-for="Comment" class="form-control rounded-pill" type="text" placeholder="Escribe tu comentario"
+            style="border: #0d023c 2px solid;" />
+        </div>
+
+        <div class="form-group" style="text-align: center; padding-bottom: 10px;">
+          <button type="submit" class="btn boton rounded-pill"
+            style="background-color: #7361c3; color: white; font-family: 'Rajdhani', sans-serif; font-size: 18px; 
+            font-weight: bold; width: 100%; padding: 5px 0 3px 0;">Enviar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <h1>@ViewData["Message"]</h1>
+</body>

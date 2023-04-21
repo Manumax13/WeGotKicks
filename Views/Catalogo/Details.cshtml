@@ -1,0 +1,25 @@
+@model WeGotKicks.Models.Producto
+
+@{
+    ViewData["Title"] = "Detalles del Producto";
+}
+
+    <h1>Details</h1>
+    <div class="container">
+            <div class="col-sm-4">
+              <div class="card mb-3">
+                <div class="card-body">
+                  <div class="card-img-actions">
+                    <img class="img-responsive" width="96" height="150"
+                       src="/images/@Html.DisplayFor(model => model.ImageName)" alt="@Html.DisplayFor(model => model.ImageName)"  />
+                  </div>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">@Html.DisplayFor(model => model.Name)</h5>
+                  <p class="card-text">@Html.DisplayFor(model => model.Descripcion)</p>
+                  <h5 class="card-title">@Html.DisplayFor(model => model.Precio)</h5>
+                  <a class="btn btn-primary" asp-action="Add" asp-route-id="Id">Add</a>
+                </div>
+              </div>
+            </div>
+    </div>

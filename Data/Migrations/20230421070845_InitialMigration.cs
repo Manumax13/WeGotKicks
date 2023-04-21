@@ -52,6 +52,40 @@ namespace WeGotKicks.Data.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "DataProductos",
+                columns: table => new
+                {
+                    id = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    Name = table.Column<string>(type: "text", nullable: true),
+                    Descripcion = table.Column<string>(type: "text", nullable: true),
+                    Precio = table.Column<decimal>(type: "numeric", nullable: false),
+                    PorcentajeDescuento = table.Column<decimal>(type: "numeric", nullable: false),
+                    ImageName = table.Column<string>(type: "text", nullable: true),
+                    Status = table.Column<string>(type: "text", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_DataProductos", x => x.id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "t_contacto",
+                columns: table => new
+                {
+                    id = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    name = table.Column<string>(type: "text", nullable: true),
+                    email = table.Column<string>(type: "text", nullable: true),
+                    subject = table.Column<string>(type: "text", nullable: true),
+                    comment = table.Column<string>(type: "text", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_t_contacto", x => x.id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "AspNetRoleClaims",
                 columns: table => new
                 {
@@ -212,6 +246,12 @@ namespace WeGotKicks.Data.Migrations
 
             migrationBuilder.DropTable(
                 name: "AspNetUserTokens");
+
+            migrationBuilder.DropTable(
+                name: "DataProductos");
+
+            migrationBuilder.DropTable(
+                name: "t_contacto");
 
             migrationBuilder.DropTable(
                 name: "AspNetRoles");
