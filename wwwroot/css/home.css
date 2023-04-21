@@ -1,0 +1,54 @@
+body {
+    background-image: url(/images/fondo.jpeg);
+    background-size: cover;
+    background-position: center center;
+}
+
+.boton {
+    border: #080502 2px solid;
+    background-color: #080502;
+    color: white;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 18px;
+    width: 300px;
+    padding: 5px 0 3px 0;
+}
+
+.boton:hover {
+    border: white 3px solid;
+    color: white;
+}
+
+.columna {
+    text-align: center;
+}
+
+h1 {
+    color: orange;
+}
+
+.img-logo {
+    height: 300px;
+    width: auto;
+    border-radius: 50%;
+}
+
+.txt-logo {
+    margin: 2rem 0;
+    height: 260px;
+    width: auto;
+}
+
+.texto {
+    margin-top: 11rem;
+}
+
+.parrafo {
+    color: rgb(20, 17, 17);
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 25px;
+    width: 300px;
+    margin: 0 auto 3rem;
+    font-weight: bold;
+    text-shadow: 0 0 10px rgb(71, 88, 202);
+}

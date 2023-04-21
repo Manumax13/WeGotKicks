@@ -10,9 +10,11 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-lightblue border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a style="font-size:larger; font-weight:bold; color:navy;" class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">WE GOT KICKS</a>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container-fluid"><img src="/Images/logo.jpeg" alt="Descripción_de_la_imagen" style="width:5%; border-radius:50%;">
+
+
+                <a style="font-size:larger; font-weight:bold; color:navy;" class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"> -WE GOT KICKS-</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -20,16 +22,16 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a style="font-family: 'Rajdhani', sans-serif; font-size: 17px; margin: 0 4px; color: #2935e3;"class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index"><strong>INICIO</strong></a>
+                            <a style="font-family: 'Rajdhani', sans-serif; font-size: 17px; margin: 0 4px; color: #2935e3;"class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index"><strong>-INICIO-</strong></a>
                         </li>
                         <li class="nav-item">
-                            <a style="font-family: 'Rajdhani', sans-serif; font-size: 17px; margin: 0 4px; color: #2935e3;"class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy"><strong>PRIVACIDAD</strong></a>
+                            <a style="font-family: 'Rajdhani', sans-serif; font-size: 17px; margin: 0 4px; color: #2935e3;"class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy"><strong>-NOSOTROS-</strong></a>
                         </li>
                         <li class="nav-item">
-                            <a style="font-family: 'Rajdhani', sans-serif; font-size: 17px; margin: 0 4px; color: #2935e3;"class="nav-link text-dark" asp-area="" asp-controller="Contacto"asp-action="Index"><strong>CONTACTO</strong></a>
+                            <a style="font-family: 'Rajdhani', sans-serif; font-size: 17px; margin: 0 4px; color: #2935e3;"class="nav-link text-dark" asp-area="" asp-controller="Contacto"asp-action="Index"><strong>-CONTÁCTANOS-</strong></a>
                         </li>
                         <li class="nav-item">
-                            <a style="font-family: 'Rajdhani', sans-serif; font-size: 17px; margin: 0 4px; color: #2935e3;"class="nav-link text-dark" asp-area="" asp-controller="Catalogo"asp-action="Index"><strong>CATÁLOGO</strong></a>
+                            <a style="font-family: 'Rajdhani', sans-serif; font-size: 17px; margin: 0 4px; color: #2935e3;"class="nav-link text-dark" asp-area="" asp-controller="Catalogo"asp-action="Index"><strong>-CATÁLOGO-</strong></a>
                         </li>
                         <li class="nav-item">
                             <form asp-controller="Catalogo" asp-action="Index"> <input type="text" name="searchString"><input type="submit" value="Buscar"></form>
@@ -47,11 +49,13 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2023 - WeGotKicks - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </div>
-    </footer>
+    <footer class="border-top footer text-muted" style="color: rgb(23, 4, 4);">
+  <div class="container text-center">
+    &copy; 2023 - <strong>WeGotKicks</strong> - <a asp-area="" asp-controller="Home" asp-action="Privacy"><strong>Privacy</strong></a>
+  </div>
+</footer>
+
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>

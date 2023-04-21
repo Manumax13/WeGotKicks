@@ -1,8 +1,43 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
+﻿<!DOCTYPE html>
+<html lang="en">
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/home.css" asp-append-version="true">
+    <title>Document</title>
+</head>
+
+<body>
+    @{
+        ViewData["Title"] = "Home Page";
+    }
+    <div class="container" >
+        <div class="row">
+            <div class="col columna">
+                <div class="texto">
+                    <p class="parrafo">Una empresa 100% comprometida con el cliente y sus necesidades</p>
+                </div>
+                <a class="btn boton rounded-pill" role="button" asp-area="" asp-controller="Home"
+                    asp-action="Privacy"><strong>¡CONÓCENOS!</strong></a>
+            </div>
+            <div class="col columna">
+                
+                <div>
+                    <br><br><br><br><br><br>
+                    <img class="img-logo" src="/images/logo.jpeg">
+                </div>
+            </div>
+            <div class="col columna">
+                <div class="texto">
+                    <p class="parrafo">Las más recientes zapatillas exclusivas, sólo aquí en We Got Kicks</p>
+                </div>
+                <a class="btn boton rounded-pill" role="button" asp-area="" asp-controller="Catalogo"
+                    asp-action="Index"><strong>¡VAMOS A VERLAS!</strong></a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

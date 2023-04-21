@@ -1,8 +1,21 @@
 @model IEnumerable<WeGotKicks.Models.Producto>
-@{
-    ViewData["Title"] = "Catálogo";  
-}
 
+<style>
+    .img-responsive {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    }
+</style>
+
+
+<center class="titulo-texto" style="font-size: 1.5em; font-weight: bold; font-family: 'Arial Black', sans-serif;"><h1>CATÁLOGO</h1></center>
+
+<style>
+  body {
+    background: radial-gradient(circle, #e7e3d3, #c9dcdc, #848daf, #2138a0, #044aad);
+  }
+</style>
 <h1>@ViewData["Title"]</h1>
   <div class="container">
     <h1>@ViewData["Message"]</h1>
@@ -15,7 +28,7 @@
               <div class="card mb-3">
                 <div class="card-body">
                   <div class="card-img-actions">
-                    <img class="img-responsive" width="96" height="150"
+                    <img class="img-responsive" width="160" height="150"
                        src="/images/@item.ImageName" alt="@item.ImageName"  />
                   </div>
                 </div>

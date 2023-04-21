@@ -1,0 +1,42 @@
+.cuerpo {
+    background-color: #FDEEDC;
+    padding-bottom: 500px;
+    margin-bottom: 500px;
+}
+
+.contenedor {
+    margin: auto;
+    background-color: red;
+}
+
+.titulo {
+    background-color: #FFAE6D;
+    border: white 8px dotted;
+    border-radius: 30px;
+    margin: 1.5rem auto;
+    padding: 0;
+    text-shadow: 0 0 20px white, 0 0 40px white;
+    height: 68px;
+    width: 500px;
+}
+
+.titulo-texto {
+    color: white;
+    font-family: 'Sacramento', cursive;
+    font-weight: 600;
+    font-size: 2.5rem;
+    text-align: center;
+    margin: auto;
+}
+
+.Colores {
+    color: #E38B29;
+    color: #F1A661;
+    color: #FFD8A9;
+    color: #FDEEDC;
+    color: #E3C770;
+    color: #FECD70;
+    color: #FFAE6D;
+    color: #F3E0B5;
+    color: #ffa500;
+}
