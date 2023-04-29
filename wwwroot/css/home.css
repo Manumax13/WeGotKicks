@@ -1,54 +1,87 @@
 body {
-    background-image: url(/images/fondo.jpeg);
+    overflow-x: hidden;
+}
+
+.inicio {
+
+    background: linear-gradient(rgba(0, 0, 0, 0.767), rgba(2, 2, 2, 0.712)), url(/images/fondo3.jpg);
+    height: 89.5vh;
+    width: 100vw;
     background-size: cover;
     background-position: center center;
+    background-blend-mode: darken;
+    vertical-align: middle;
 }
 
-.boton {
-    border: #080502 2px solid;
-    background-color: #080502;
+.imgWGK {
+    width: 680px;
+}
+
+.btnInicio {
+
+    background-color: #048ba8;
     color: white;
-    font-family: 'Rajdhani', sans-serif;
-    font-size: 18px;
-    width: 300px;
-    padding: 5px 0 3px 0;
+    width: 100%;
+    font-size: 30px;
+    padding: 5px 3px;
+    border-radius: 15px;
+    border: 0px;
+    box-shadow: -1px 0px 81px 9px rgba(0,0,0,0.75);
+    -webkit-box-shadow: -1px 0px 81px 9px rgba(0,0,0,0.75);
+    -moz-box-shadow: -1px 0px 81px 9px rgba(0,0,0,0.75);
+    transition: all .5s;
 }
 
-.boton:hover {
-    border: white 3px solid;
+.btnInicio:hover{
+
+    font-size: 30px;
+    background-color: #f18f01;
+    color: black;
+    font-weight: 500;
+    
+}
+
+.btnInicio a{
+
+    text-decoration: none;
+    color: white;
+    
+}
+
+.novedades {
+
+    background: #048ba8;
+    height: 105vh;
+    width: 100vw;
+    background-size: cover;
+    background-position: center center;
+    background-blend-mode: darken;
+    vertical-align: middle;
+}
+
+.novedad-container{
+
+    height: 400px;
+    background-color: #2e4057;
+    
+    
+}
+
+.titulo_novedades{
+    color: rgb(238, 236, 236);
+}
+
+.titulo-novedades div h3{
+
+    margin: 30px 0px 50px 0px;
     color: white;
 }
 
-.columna {
-    text-align: center;
-}
+.novedad-container p{
 
-h1 {
-    color: orange;
-}
-
-.img-logo {
-    height: 300px;
-    width: auto;
-    border-radius: 50%;
-}
-
-.txt-logo {
-    margin: 2rem 0;
-    height: 260px;
-    width: auto;
-}
-
-.texto {
-    margin-top: 11rem;
-}
-
-.parrafo {
-    color: rgb(20, 17, 17);
-    font-family: 'Rajdhani', sans-serif;
-    font-size: 25px;
-    width: 300px;
-    margin: 0 auto 3rem;
-    font-weight: bold;
-    text-shadow: 0 0 10px rgb(71, 88, 202);
+    color: #f18f01;
+    padding-top: 13px;
+    font-size: 20px;
+    
+    
 }

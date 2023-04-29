@@ -9,12 +9,13 @@
     <link rel="stylesheet" href="~/WeGotKicks.styles.css" asp-append-version="true" />
 </head>
 <body>
+
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid"><img src="/Images/logo.jpeg" alt="Descripción_de_la_imagen" style="width:5%; border-radius:50%;">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm border-bottom box-shadow barrita">
+            <div class="container-fluid nav-logo"><img src="/Images/logo-nav.png" alt="Descripción_de_la_imagen">
 
 
-                <a style="font-size:larger; font-weight:bold; color:navy;" class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"> -WE GOT KICKS-</a>
+                <a style="font-size:larger; font-weight:bold; color:navy;" class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -22,20 +23,26 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a style="font-family: 'Rajdhani', sans-serif; font-size: 17px; margin: 0 4px; color: #2935e3;"class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index"><strong>-INICIO-</strong></a>
+                            <a style="margin-right: 20px;" class="nav-link text-dark item-nav" asp-area="" asp-controller="Home" asp-action="Index">INICIO</a>
                         </li>
                         <li class="nav-item">
-                            <a style="font-family: 'Rajdhani', sans-serif; font-size: 17px; margin: 0 4px; color: #2935e3;"class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy"><strong>-NOSOTROS-</strong></a>
+                            <a style="margin-right: 20px;" class="nav-link text-dark item-nav" asp-area="" asp-controller="Home" asp-action="Privacy">NOSOTROS</a>
                         </li>
                         <li class="nav-item">
-                            <a style="font-family: 'Rajdhani', sans-serif; font-size: 17px; margin: 0 4px; color: #2935e3;"class="nav-link text-dark" asp-area="" asp-controller="Contacto"asp-action="Index"><strong>-CONTÁCTANOS-</strong></a>
+                            <a style="margin-right: 20px;" class="nav-link text-dark item-nav" asp-area="" asp-controller="Contacto"asp-action="Index">CONTÁCTANOS</a>
                         </li>
                         <li class="nav-item">
-                            <a style="font-family: 'Rajdhani', sans-serif; font-size: 17px; margin: 0 4px; color: #2935e3;"class="nav-link text-dark" asp-area="" asp-controller="Catalogo"asp-action="Index"><strong>-CATÁLOGO-</strong></a>
+                            <a style="margin-right: 20px;" class="nav-link text-dark item-nav" asp-area="" asp-controller="Catalogo"asp-action="Index">CATÁLOGO</a>
                         </li>
                         <li class="nav-item">
-                            <form asp-controller="Catalogo" asp-action="Index"> <input type="text" name="searchString"><input type="submit" value="Buscar"></form>
+                            <form asp-controller="Catalogo" asp-action="Index"> 
+                                <div class="caja-buscar_container">
+                                    <input class="cajaBuscar" type="text" name="searchString"><input class="btnBuscar" type="submit" value="Buscar">
+                                </div>
+                                
+                            </form>
                         </li>
+                        
 
                     </ul>
                     <partial name="_LoginPartial" />
@@ -43,11 +50,14 @@
             </div>
         </nav>
     </header>
-    <div class="container">
+    
+    <div class="container-fluid">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
+
+    
 
     <footer class="border-top footer text-muted" style="color: rgb(23, 4, 4);">
   <div class="container text-center">

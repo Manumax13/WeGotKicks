@@ -1,14 +1,7 @@
-﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-for details on configuring this project to bundle and minify static web assets. */
-
-a.navbar-brand {
+﻿a.navbar-brand {
   white-space: normal;
   text-align: center;
   word-break: break-all;
-}
-
-a {
-  color: #0077cc;
 }
 
 .btn-primary {
@@ -20,18 +13,6 @@ a {
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
   color: #fff;
   background-color: #1b6ec2;
-  border-color: #1861ac;
-}
-
-.border-top {
-  border-top: 1px solid #e5e5e5;
-}
-.border-bottom {
-  border-bottom: 1px solid #e5e5e5;
-}
-
-.box-shadow {
-  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
 }
 
 button.accept-policy {
@@ -46,3 +27,55 @@ button.accept-policy {
   white-space: nowrap;
   line-height: 60px;
 }
+
+.container-fluid {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+.barrita {
+  background-color: #ffffff;
+  border: none !important;
+  margin: 0px 50px 0px 160px;
+ 
+}
+
+.nav-logo img{
+
+  height: 80px;
+  margin: 7px 70px 4px 30px;
+}
+
+.caja-buscar_container{
+  border: 1px solid rgb(117, 117, 117);
+  border-radius: 20px;
+  margin-top: 6px;
+}
+
+.cajaBuscar {
+  border: none;
+  background-color: rgba(0, 0, 255, 0);
+
+}
+
+.btnBuscar {
+
+  border: none;
+  position: relative;
+  border-radius: 0px 20px 20px 0px;
+  background-color: #f4f5f5;
+}
+
+.cajaBuscar:focus {
+  border: transparent;
+  outline: none;
+  margin-left: 10px;
+  
+
+}
+

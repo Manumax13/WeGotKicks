@@ -13,31 +13,136 @@
     @{
         ViewData["Title"] = "Home Page";
     }
-    <div class="container" >
-        <div class="row">
-            <div class="col columna">
-                <div class="texto">
-                    <p class="parrafo">Una empresa 100% comprometida con el cliente y sus necesidades uwu</p>
+    
+    <div class="inicio">
+        
+        <div class="container-fluid">
+            
+            <div class="row"></div>
+
+                <div class="row">
+
+                    <div class="col col-md-1"></div>
+                    <div id="titulo-inicio" class="col col-md-5">
+
+                        <div class="row">
+                            <div class="col col-md-12">
+                                <img class="imgWGK" src="/images/wegotkicks.png" alt="">
+                            </div>
+                        </div>
+
+                        <div class="row mt-5">
+            
+                            <div class="col col-md-1"></div>
+                            <div class="col col-md-5">
+                                
+                                <button class="btnInicio"><a role="button" asp-area="" asp-controller="Home"
+                                 asp-action="Privacy">Conócenos</a></button>
+                            </div>
+
+                            <div class="col col-md-5">
+                                <button class="btnInicio"><a href="#novedades">Novedades</a></button>
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                    <div class="col col-md-5"></div>
                 </div>
-                <a class="btn boton rounded-pill" role="button" asp-area="" asp-controller="Home"
-                    asp-action="Privacy"><strong>¡CONÓCENOS!</strong></a>
+                <div class="row"></div>
+        </div>  
+    </div>
+
+    <div class="novedades" id="novedades">
+        <div class="container-fluid">
+            <div class="row titulo-novedades" >
+                <div class="col col-md-4">
+                    <h3>━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</h3>
+                </div>
+                <div class="col col-md-4 novedad_titulo_container" style="text-align: center;">
+                    <h3 style="font-size: 25px;padding-top: 5px;">NOVEDADES</h3>
+                </div>
+                <div class="col col-md-4">
+                    <h3>━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</h3>
+                </div>
             </div>
-            <div class="col columna">
+            <div class="row">
+
                 
-                <div>
-                    <br><br><br><br><br><br>
-                    <img class="img-logo" src="/images/logo.jpeg">
+                <div class="col col-md-2"></div>
+
+                <div class="col col-md-2">
+                    <div class="novedad-container" style="text-align: center; padding-top: 15px;">
+                        <img style="object-fit: fill;height: 85%;" src="/images/zapa1.jpg" alt="">
+                        <p>ADIDAS ORIGINALS</p>
+                    </div>
                 </div>
-            </div>
-            <div class="col columna">
-                <div class="texto">
-                    <p class="parrafo">Las más recientes zapatillas exclusivas, sólo aquí en We Got Kicks</p>
+
+                <div class="col col-md-2">
+                    <div class="novedad-container" style="text-align: center; padding-top: 15px;">
+                        <img style="object-fit: fill;height: 85%;" src="/images/zapa2.jpg" alt="">
+                        <p>NEW BALANCE</p>
+                    </div>
                 </div>
-                <a class="btn boton rounded-pill" role="button" asp-area="" asp-controller="Catalogo"
-                    asp-action="Index"><strong>¡VAMOS A VERLAS!</strong></a>
+
+                <div class="col col-md-2">
+                    <div class="novedad-container" style="text-align: center; padding-top: 15px;">
+                        <img style="object-fit: fill;height: 85%;" src="/images/zapa3.jpg" alt="">
+                        <p>ADIDAS ORIGINALS</p>
+                    </div>
+                </div>
+
+                <div class="col col-md-2">
+                    <div class="novedad-container" style="text-align: center; padding-top: 15px;">
+                        <img style="object-fit: fill;height: 85%;" src="/images/zapa4.jpg" alt="">
+                        <p>REEBOK</p>
+                    </div>
+                </div>
+
+                <div class="col col-md-2"></div>
             </div>
+
+            <div class="row" style="height: 50px;"></div>
+
+<div class="row">
+
+                
+                <div class="col col-md-2"></div>
+
+                <div class="col col-md-2">
+                    <div class="novedad-container" style="text-align: center; padding-top: 15px;">
+                        <img style="object-fit: fill;height: 85%;" src="/images/zapa5.jpg" alt="">
+                        <p>ADIDAS ORIGINALS</p>
+                    </div>
+                </div>
+
+                <div class="col col-md-2">
+                    <div class="novedad-container" style="text-align: center; padding-top: 15px;">
+                        <img style="object-fit: fill;height: 85%;" src="/images/zapa6.jpg" alt="">
+                        <p>NEW BALANCE</p>
+                    </div>
+                </div>
+
+                <div class="col col-md-2">
+                    <div class="novedad-container" style="text-align: center; padding-top: 15px;">
+                        <img style="object-fit: fill;height: 85%;" src="/images/zapa7.jpg" alt="">
+                        <p>REEBOK</p>
+                    </div>
+                </div>
+
+                <div class="col col-md-2">
+                    <div class="novedad-container" style="text-align: center; padding-top: 15px;">
+                        <img style="object-fit: fill;height: 85%;" src="/images/zapa8.jpg" alt="">
+                        <p>ADIDAS ORIGINALS</p>
+                    </div>
+                </div>
+
+                <div class="col col-md-2"></div>
+            </div>
+
         </div>
     </div>
+
 </body>
 
 </html>
