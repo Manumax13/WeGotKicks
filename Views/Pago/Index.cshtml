@@ -1,0 +1,53 @@
+@model IEnumerable<WeGotKicks.Models.Pago>
+
+@{
+    var count = 1;
+}
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="~/css/pedido.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani&family=Sacramento&display=swap" rel="stylesheet">
+</head>
+
+<body class="cuerpo">
+
+    <div>
+        <h1 class="titulo">Listado de Pagos</h1>
+    </div>
+
+    <a class="boton" asp-action="ExportarExcel"><i class="fa-solid fa-file-excel"></i> Generar Reporte en Excel</a>
+
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th scope="col">№</th>
+                <th scope="col">@Html.DisplayNameFor(model => model.UserID)</th>
+                <th scope="col">@Html.DisplayNameFor(model => model.PaymentDate)</th>
+                <th scope="col">@Html.DisplayNameFor(model => model.MontoTotal)</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <th scope="row">@count</th>
+                    <td>@Html.DisplayFor(modelItem => item.UserID)</td>
+                    <td>@Html.DisplayFor(modelItem => item.PaymentDate)</td>
+                    <td>S/. @Html.DisplayFor(modelItem => item.MontoTotal)</td>
+                </tr>
+                count++;
+            }
+        </tbody>
+    </table>
+</body>
+
+<script src="https://kit.fontawesome.com/42be4397d3.js" crossorigin="anonymous"></script>
+
+</html>

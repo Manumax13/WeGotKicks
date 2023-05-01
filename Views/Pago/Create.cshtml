@@ -1,0 +1,71 @@
+@model WeGotKicks.Models.Pago
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="~/css/pedido.css" asp-append-version="true" />
+  <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani&family=Sacramento&display=swap" rel="stylesheet">
+</head>
+
+<body class="cuerpo">
+
+  <div class="card" style="border-radius: 30px; padding: 0 1rem; border: 3px #E38B29 solid;">
+    <div class="card-body">
+      <form asp-controller="Pago" asp-action="Pagar">
+        <p class="card-title p-titulo">Pago</p>
+        <input type="hidden" asp-for="UserID" />
+        <div class="form-group row">
+          <label asp-for="NombreTarjeta" class="control-label p-texto"></label>
+          <input asp-for="NombreTarjeta" class="form-control"
+            style="border-radius: 30px; border: 1px #E38B29 solid; margin-top: 5px; padding-left: 15px; background-color: #F3E0B5;" />
+        </div>
+        <div class="form-group row">
+          <label asp-for="NumeroTarjeta" class="control-label p-texto"></label>
+          <input asp-for="NumeroTarjeta" class="form-control" data-inputmask="'mask': '9999-9999-9999-9999'"
+            style="border-radius: 30px; border: 1px #E38B29 solid; margin-top: 5px; padding-left: 15px; background-color: #F3E0B5;" />
+        </div>
+        <div class="form-group row">
+          <label asp-for="DueDateYYMM" class="control-label p-texto"></label>
+          <input asp-for="DueDateYYMM" class="form-control" data-inputmask="'mask': '99/99', 'placeholder': 'yy/mm'"
+            style="border-radius: 30px; border: 1px #E38B29 solid; margin-top: 5px; padding-left: 15px; background-color: #F3E0B5;" />
+        </div>
+        <div class="form-group row">
+          <label asp-for="Cvv" class="control-label p-texto"></label>
+          <input asp-for="Cvv" class="form-control" data-inputmask="'mask': '999', 'placeholder': '999'"
+            style="border-radius: 30px; border: 1px #E38B29 solid; margin-top: 5px; padding-left: 15px; background-color: #F3E0B5;" />
+        </div>
+        <div class="form-group row">
+          <label asp-for="MontoTotal" class="control-label p-texto"></label>
+          <input asp-for="MontoTotal" class="form-control" data-thousands="," data-decimal="."
+            style="border-radius: 30px; border: 1px #E38B29 solid; margin: 5px 0 25px; padding-left: 15px; background-color: #F3E0B5;" />
+        </div>
+        <hr class="linea">
+        <div class="form-group" style="margin-top: 20px;">
+          <div class="row">
+            <div class="col-6">
+              <button type="submit" class="btn"
+                style="background-color: #E38B29; border-radius: 30px; 
+                                width: 100%; color: white; font-family: 'Rajdhani', sans-serif; font-size: 18px; font-weight: bold;">
+                Pagar</button>
+            </div>
+            <div class="col-6">
+              <a asp-controller="Proforma" asp-action="Index" class="btn"
+                style="background-color: #F3E0B5; border-radius: 30px; 
+                                width: 100%; color: #444444; font-family: 'Rajdhani', sans-serif; font-size: 18px; font-weight: bold;">
+                Regresar al Carrito</a>
+            </div>
+          </div>
+        </div>
+      </form>
+      <h1>@ViewData["Message"]</h1>
+    </div>
+  </div>
+
+</body>
+<script src="https://kit.fontawesome.com/42be4397d3.js" crossorigin="anonymous"></script>
+
+</html>
