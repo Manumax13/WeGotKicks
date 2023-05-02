@@ -19,21 +19,22 @@
     <link href="https://fonts.googleapis.com/css2?family=Rajdhani&family=Sacramento&display=swap" rel="stylesheet">
 </head>
 
+
 <body class="cuerpo">
 
     <div>
-        <h1 class="titulo">Detalles del Carrito</h1>
+        <h1 class="titulo" style="text-align: center;">Detalles del Carrito</h1>
     </div>
 
     <a class="boton" asp-controller="Pago" asp-action="Create" asp-route-monto="@montoTotal">Ir a Pagar</a>
 
-    <table class="table table-striped table-hover">
+    <table class="table table-striped table-hover" style="margin: 0 auto; width:80%;">
         <thead>
             <tr>
                 <th>@Html.DisplayNameFor(model => listItemsCarrito.FirstOrDefault().Producto.Name)</th>
                 <th>@Html.DisplayNameFor(model => listItemsCarrito.FirstOrDefault().Cantidad)</th>
                 <th>@Html.DisplayNameFor(model => listItemsCarrito.FirstOrDefault().Precio)</th>
-                <th>Operaciones</th>
+                <th>Opciones</th>
             </tr>
         </thead>
         <tbody>
@@ -52,12 +53,14 @@
         </tbody>
     </table>
 
-    <div>
+    <br>
+    <div style="text-align: center;">
         <p class="total">Monto Total: S/. @montoTotal</p>
     </div>
-
+    </br>
 </body>
 
 <script src="https://kit.fontawesome.com/42be4397d3.js" crossorigin="anonymous"></script>
+
 
 </html>
