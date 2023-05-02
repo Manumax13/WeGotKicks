@@ -10,31 +10,37 @@
 
 <style>
   body {
-    background: radial-gradient(circle, #e7e3d3, #c9dcdc, #848daf, #2138a0, #044aad);
+    background: white;
   }
 </style>
 
-<center class="titulo-texto" style="font-size: 1.5em; font-weight: bold; font-family: 'Arial Black', sans-serif;"><h1>Conoce tu Zapatilla</h1></center>
+<div style="background: linear-gradient(90deg, rgba(4,139,168,1) 0%, rgba(46,64,87,1) 100%);padding: 50px;height: 80vh;">
+
+  <center class="titulo-texto" style="font-size: 1.5em; font-weight: bold; font-family: 'Arial Black', sans-serif;color: white;padding: 10px;"><h1>Conoce tu Zapatilla</h1></center>
 
 
-    <h1 class="titulo-texto" style="font-size: 1.5em; font-weight: bold; font-family: 'Arial Black', sans-serif;">Descripción</h1>
     <div class="container" style="text-align: center;">
-            <div class="col-sm-4">
-              <div class="card mb-3">
-                <div class="card-body">
-                  <div class="card-img-actions">
-                    <img class="img-responsive" width="97" height="150"
-                       src="/images/@Html.DisplayFor(model => model.ImageName)" alt="@Html.DisplayFor(model => model.ImageName)"  />
-                  </div>
-                </div>
-                <div class="card-body">
-                  <h5 class="card-title">@Html.DisplayFor(model => model.Name)</h5>
-                  <p class="card-text">@Html.DisplayFor(model => model.Descripcion)</p>
-                  <h5 class="card-title">@Html.DisplayFor(model => model.Precio)</h5>
-                  
-                  <a class="btn" id="boton" asp-action="Add" asp-route-id="@Model.Id"><strong>Añadir al Carrito
-                  uwu</a>
-                </div>
-              </div>
-            </div>
+      <div class="row">
+
+        <div class="col col-md-7">
+            <img class="img-responsive" width="65%" src="/images/@Html.DisplayFor(model => model.ImageName)" alt="@Html.DisplayFor(model => model.ImageName)">
+        </div>
+
+        <div class="col col-md-4">
+            <br><br>
+            <h5 style="font-size: 50px;color: white;" class="card-title">@Html.DisplayFor(model => model.Name)</h5>
+            <br>
+            <p style="font-size: 40px;color: white;" class="card-text">@Html.DisplayFor(model => model.Descripcion)</p>
+            <br>
+            <h5 style="font-size: 40px;color: white;" class="card-title">@Html.DisplayFor(model => model.Precio)</h5>
+            <br>
+            <a class="btn btn-primary" asp-action="Add" asp-route-id="Id">Agregar al Carrito</a>
+        </div>
+
+      </div> 
     </div>
+
+
+
+</div>
+
