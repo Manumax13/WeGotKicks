@@ -33,12 +33,14 @@
     }
   </style>
 
-<body class="cuerpo" style="text-align: center;">
+  <div class="cuerpo">
+
+    <body style="text-align: center;background-color: white;">
     
-    <div id="contenedor" class="row columna" style="margin-top: 50px;">
-        <div class="col-md-4 objeto">
+    <div id="contenedor" class="row columna">
+        <div class="col-md-4 objeto" style="background-color: #2e4057;">
             <form id="account" method="post" class="formulario">
-                <h4>INICIAR SESIÓN</h4>
+                <h4 style="color: white;">INICIAR SESIÓN</h4>
                 <hr class="regla-horizontal">
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                 <div class="form-floating" style="margin-bottom: 1rem">
@@ -54,14 +56,14 @@
                 </div>
                 <div style="margin-bottom: 1rem">
                     <div class="checkbox">
-                        <label asp-for="Input.RememberMe" class="form-label">
+                        <label asp-for="Input.RememberMe" class="form-label" style="color: white;">
                             <input class="form-check-input" asp-for="Input.RememberMe" style="margin-right: 10px;" />
                             @Html.DisplayNameFor(m => m.Input.RememberMe)
                         </label>
                     </div>
                 </div>
                 <div style="margin-bottom: 2.5rem">
-                    <button id="login-submit" type="submit" class="w-100 btn btn-lg" style="background-color: #ada7ff; font-weight: bold;">Ingresar</button>
+                    <button id="login-submit" type="submit" class="w-100 btn btn-lg" style="background-color: #ffffff; font-weight: bold;">Ingresar</button>
 
                 </div>
                 <div>
@@ -86,5 +88,9 @@
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://kit.fontawesome.com/64b57b2524.js" crossorigin="anonymous"></script>
 </body>
+
+  </div>
+
+
 
 </html>

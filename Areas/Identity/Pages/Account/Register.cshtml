@@ -28,12 +28,13 @@
     }
 </style>
 
-<body class="cuerpo">
-
-    <div class="row columna" style="margin-top: 50px;">
-        <div class="col-md-4 objeto">
+<body style="overflow-x: hidden;">
+    
+    <div class="cuerpo">
+        <div class="row columna" style="margin-top: 2px;">
+        <div class="col-md-4 objeto" style="background-color: #2e4057;">
             <form id="registerForm" asp-route-returnUrl="@Model.ReturnUrl" method="post">
-                <h4>Registrate</h4>
+                <h4 style="color: white;">Registrate</h4>
                 <hr class="regla-horizontal">
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                 <div class="form-floating" style="margin-bottom: 1rem">
@@ -55,7 +56,7 @@
                 </div>
                 <hr class="regla-horizontal">
                 <div style="margin-bottom: 2.5rem">
-                    <button id="registerSubmit" type="submit" class="w-100 btn btn-lg" style="background-color: #ada7ff; font-weight: bold;">Registrarse</button>
+                    <button id="registerSubmit" type="submit" class="w-100 btn btn-lg" style="background-color: #ffffff; font-weight: bold;">Registrarse</button>
 
                 </div>
             </form>
@@ -69,6 +70,10 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://kit.fontawesome.com/64b57b2524.js" crossorigin="anonymous"></script>
+
+    </div>
+
+    
 </body>
 
 </html>
