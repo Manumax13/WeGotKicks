@@ -13,28 +13,28 @@
 
 <body class="cuerpo">
 
-    <div class="card" style="border-radius: 30px; padding: 0 1rem; border: 3px #E38B29 solid;">
+    <div class="card" style="border-radius: 30px; padding: 0 1rem; border: 2px #2f2d2e solid; width:50%; left:25%">
         <div class="card-body">
             <form asp-action="Edit">
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-                <p class="card-title p-titulo">Editar Pedido</p>
+                <p class="card-title p-titulo" style="text-align: center;"><b>Editar Pedido</b></p>
                 <input type="hidden" asp-for="ID" />
                 <div class="form-group">
                     <label asp-for="UserID" class="control-label p-texto"></label>
                     <input asp-for="UserID" class="form-control"
-                        style="border-radius: 30px; border: 1px #E38B29 solid; margin-top: 5px; padding-left: 15px; background-color: #F3E0B5;" />
+                        style="border-radius: 30px; border: 1px #4d4c4b solid; margin-top: 5px; padding-left: 15px; background-color: #e6e6e6;" />
                     <span asp-validation-for="UserID" class="text-danger"></span>
                 </div>
                 <div class="form-group">
                     <label asp-for="Total" class="control-label p-texto"></label>
                     <input asp-for="Total" class="form-control"
-                        style="border-radius: 30px; border: 1px #E38B29 solid; margin-top: 5px; padding-left: 15px; background-color: #F3E0B5;" />
+                        style="border-radius: 30px; border: 1px #4d4c4b solid; margin-top: 5px; padding-left: 15px; background-color: #e6e6e6;" />
                     <span asp-validation-for="Total" class="text-danger"></span>
                 </div>
                 <div class="form-group">
                     <label asp-for="Status" class="control-label p-texto"></label>
                     <input asp-for="Status" class="form-control"
-                        style="border-radius: 30px; border: 1px #E38B29 solid; margin: 5px 0 25px; padding-left: 15px; background-color: #F3E0B5;" />
+                        style="border-radius: 30px; border: 1px #4d4c4b solid; margin: 5px 0 25px; padding-left: 15px; background-color: #e6e6e6;" />
                     <span asp-validation-for="Status" class="text-danger"></span>
                 </div>
                 <hr class="linea">
@@ -42,13 +42,13 @@
                     <div class="row">
                         <div class="col-6">
                             <input type="submit" value="Save" class="btn"
-                                style="background-color: #E38B29; border-radius: 30px; 
+                                style="background-color: #242424; border-radius: 30px; 
                                 width: 100%; color: white; font-family: 'Rajdhani', sans-serif; font-size: 18px; font-weight: bold;">
                         </div>
                         <div class="col-6">
                             <a asp-action="Index" class="btn"
-                                style="background-color: #F3E0B5; border-radius: 30px; 
-                                width: 100%; color: #444444; font-family: 'Rajdhani', sans-serif; font-size: 18px; font-weight: bold;">
+                                style="background-color: #242424; border-radius: 30px; 
+                                width: 100%; color: white; font-family: 'Rajdhani', sans-serif; font-size: 18px; font-weight: bold;">
                                 Regresar</a>
                         </div>
                     </div>

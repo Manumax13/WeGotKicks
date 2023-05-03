@@ -19,14 +19,14 @@
 <body class="cuerpo">
 
     <div>
-        <h1 class="titulo">Listado de Pagos</h1>
+        <h1 class="titulo" style="text-align: center;">Listado de Pagos</h1>
     </div>
 
-    <a class="boton" asp-action="ExportarExcel"><i class="fa-solid fa-file-excel"></i> Generar Reporte en Excel</a>
+    <a class="boton" asp-action="ExportarExcel" style="border: 3px solid #585858; padding:5px;background-color: #4b4a4a;color: #ffffff;border-radius: 40px;"><i class="fa-solid fa-file-excel"></i> Generar Reporte en Excel</a>
 
-    <table class="table table-striped table-hover">
+    <table class="table table-striped table-hover" style="border-radius: 40px;padding: 0 1rem; border: 2px #3d3d3d solid;margin: 0 auto; width:75%;">
         <thead>
-            <tr>
+            <tr style="background: #8d939b;">
                 <th scope="col">№</th>
                 <th scope="col">@Html.DisplayNameFor(model => model.UserID)</th>
                 <th scope="col">@Html.DisplayNameFor(model => model.PaymentDate)</th>
