@@ -1,0 +1,9 @@
+body {
+    background-color: white;
+}
+
+.cuerpo {
+
+    height: 82vh;
+    background: linear-gradient(90deg, rgba(46,64,87,1) 0%, rgba(4,105,177,1) 100%);
+}

@@ -13,37 +13,46 @@
   <title>Contacto</title>
 </head>
 
-<body class="cuerpo" style="background: linear-gradient(to bottom, #007bff, #c7c7cc);">
+
+
+<body>
+
+  <div class="cuerpo">
+
+
+
+
+  
   <div style="text-align: center;">
-    <p class="titulo-texto" style="font-size: 1.5em; font-weight: bold; font-family: 'Arial Black', sans-serif;"> ¡We Got Kick te escucha!</p>
+    <p class="titulo-texto" style="font-size: 3em; font-weight: bold; font-family: 'Arial Black', sans-serif;padding-top: 40px;color:white;"> ¡We Got Kick te escucha!</p>
   </div>
 
-  <div class="card" style="width: 40%; margin: 30px auto 120px; border-radius: 30px; padding: 0px 10px; 
-  border: #0d023c 2px solid; background-color: #617ef1;">
+  <div class="card" style="width: 40%; margin: 30px auto 120px; border-radius: 30px; padding: 20px 10px; 
+  border: #0d023c 2px solid; background-color: #2e4057;">
     <div class="card-body">
       <form asp-controller="Contacto" asp-action="Create" class="topBefore">
 
         <div class="mb-3 row" style="padding-bottom: 10px;">
-          <label asp-for="Name" class="control-label"style="font-weight:bold;"></label>
+          <label asp-for="Name" class="control-label"style="font-weight:bold;;color:white;"></label>
           <input asp-for="Name" class="form-control rounded-pill" type="text" placeholder="Escribe tu nombre"
             style="border: #0d023c 2px solid;" />
         </div>
 
         <div class="mb-3 row" style="padding-bottom: 10px;">
-          <label asp-for="Email" class="control-label"style="font-weight:bold;"></label>
+          <label asp-for="Email" class="control-label"style="font-weight:bold;;color:white;"></label>
           <input asp-for="Email" class="form-control rounded-pill" type="text" placeholder="Escribe tu email"
             style="border: #0d023c 2px solid;" />
         </div>
 
         <div class="mb-3 row" style="padding-bottom: 10px;">
-          <label asp-for="Subject" class="control-label"style="font-weight:bold;"></label>
+          <label asp-for="Subject" class="control-label"style="font-weight:bold;;color:white;"></label>
           <input asp-for="Subject" class="form-control rounded-pill" type="text" placeholder="Escribe la tematica"
             style="border: #0d023c 2px solid;" />
         </div>
 
 
         <div class="mb-3 row" style="padding-bottom: 40px;">
-          <label asp-for="Comment" class="control-label"style="font-weight:bold;"></label>
+          <label asp-for="Comment" class="control-label"style="font-weight:bold;;color:white;"></label>
           <input asp-for="Comment" class="form-control rounded-pill" type="text" placeholder="Escribe tu comentario"
             style="border: #0d023c 2px solid;" />
         </div>
@@ -55,6 +64,7 @@
         </div>
       </form>
     </div>
+  </div>
   </div>
 
   <h1>@ViewData["Message"]</h1>
