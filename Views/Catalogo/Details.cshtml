@@ -34,9 +34,9 @@
             <br>
             <h5 style="font-size: 40px;color: white;" class="card-title">@Html.DisplayFor(model => model.Precio)</h5>
             <br>
-            <a class="btn btn-primary" asp-action="Add" asp-route-id="Id">Agregar a Carrito</a>
+            <a class="btn" id="boton" asp-action="Add" asp-route-id="@Model.Id"><strong>Añadir al Carrito
+           </a>
         </div>
-
       </div> 
     </div>
 
