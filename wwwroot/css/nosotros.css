@@ -1,59 +1,50 @@
 body {
-    overflow-y: hidden;
-}
-
-.nosotros {
-
-    height: 80vh;
-    width: 100vw;
-    background: #2f2d2e;
-    margin: 0px;
-    position: relative;
-    
+    background-color: white;
+    overflow-x: hidden;
+    padding-bottom: 5%;
     
 }
 
-.mision-container {
-
-    position: absolute;
-    height: 100%;
-    width: 50vw;
-    left: 0;
-    margin: 20px;
-    padding: 20px;
-
+h1{
+    text-align: center;
 }
 
-.vision-container {
-
-    position: absolute;
-    height: 100%;
-    width: 50vw;
-    right: 0;
-    margin: 20px;
-    padding: 20px;
+.imga {
+    width: 100%;
+    object-fit: cover;
 }
 
-.mision {
+.imagen-container {
 
-    margin: 10% 20px;
-    padding: 20px;
-    color: white;
-
-
+    width: 100%;
+    
+    margin: auto auto;
 }
 
-.vision {
+.componente{
+    background: linear-gradient(rgba(0, 0, 0, 0.401), rgba(2, 2, 2, 0.712)), url(/images/fondo1a.jpg);
+    background-size: cover;
+}
 
-    margin: 10% 20px;
-    padding: 20px;
+.componente:last-child{
+    background: linear-gradient(rgba(0, 0, 0, 0.401), rgba(2, 2, 2, 0.712)), url(/images/fondo2a.jpeg);
+    background-size: cover;
+}
+
+.hola {
+
+    height: fit-content;
+    background-color: #2f2d2e;
     color: white;
 }
 
+h5{
+    font-size: 30px;
 
+    padding: 30px;
+}
 
-div p {
-
-    margin: 0px;
-    font-size: 25px;
+h3 {
+    font-size: 40px;
+    padding: 30px;
 }

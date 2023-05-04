@@ -1,9 +1,12 @@
 body {
     background-color: white;
+    height: 100%;
 }
 
 .cuerpo {
 
-    height: 82vh;
+    height: fit-content;
+    padding-bottom: 2%;
+    margin-bottom: 45px;
     background: linear-gradient(90deg, rgba(46,64,87,1) 0%, rgba(4,105,177,1) 100%);
 }
