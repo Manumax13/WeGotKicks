@@ -5,16 +5,11 @@ body {
 .inicio {
 
     background: linear-gradient(rgba(0, 0, 0, 0.767), rgba(2, 2, 2, 0.712)), url(/images/fondo3.jpg);
-    height: 89.5vh;
-    width: 100vw;
+    height: 100%;
     background-size: cover;
     background-position: center center;
     background-blend-mode: darken;
     vertical-align: middle;
-}
-
-.imgWGK {
-    width: 680px;
 }
 
 .btnInicio {
@@ -22,22 +17,22 @@ body {
     background-color: #048ba8;
     color: white;
     width: 100%;
-    font-size: 30px;
-    padding: 5px 3px;
+    font-size: 120%;
     border-radius: 15px;
     border: 0px;
-    box-shadow: -1px 0px 81px 9px rgba(0,0,0,0.75);
-    -webkit-box-shadow: -1px 0px 81px 9px rgba(0,0,0,0.75);
-    -moz-box-shadow: -1px 0px 81px 9px rgba(0,0,0,0.75);
-    transition: all .5s;
+    font-size: 20px;
+    transition: 0.5s;
+    border: none;
+
+   
 }
 
 .btnInicio:hover{
 
-    font-size: 30px;
     background-color: #f18f01;
     color: black;
-    font-weight: 500;
+    font-weight: 800;
+    border: none;
     
 }
 
@@ -45,43 +40,45 @@ body {
 
     text-decoration: none;
     color: white;
+    font-weight: 700;
+    
     
 }
 
-.novedades {
+.novedades-container {
 
-    background: #048ba8;
-    height: 105vh;
-    width: 100vw;
+    background: linear-gradient(180deg, rgba(4,139,168,1) 0%, rgba(46,64,87,1) 100%);
+    height: 100%;
     background-size: cover;
     background-position: center center;
     background-blend-mode: darken;
     vertical-align: middle;
 }
 
-.novedad-container{
-
-    height: 400px;
-    background-color: #2e4057;
-    
-    
-}
-
-.titulo_novedades{
-    color: rgb(238, 236, 236);
-}
-
-.titulo-novedades div h3{
-
-    margin: 30px 0px 50px 0px;
+.row-novedades {
     color: white;
+    text-align: center;
+}
+
+.novedad-container {
+
+    background-color: #2f2d2e;
+    text-align: center;
+    border-radius: 10px;
+    height: 100%;
+}
+
+.novedad-container img{
+    margin: 10px 0px;
+    width: 90%;
+    border-radius: 10px;
 }
 
 .novedad-container p{
-
-    color: #f18f01;
-    padding-top: 13px;
-    font-size: 20px;
+    color: white;
+    font-size: 120%;
+    font-weight: 600;
     
     
 }
+
