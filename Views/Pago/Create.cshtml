@@ -11,37 +11,38 @@
   <link href="https://fonts.googleapis.com/css2?family=Rajdhani&family=Sacramento&display=swap" rel="stylesheet">
 </head>
 
+
 <body class="cuerpo">
 
-  <div class="card" style="border-radius: 30px; padding: 0 1rem; border: 3px #E38B29 solid;">
+  <div class="card" style="border-radius: 30px; padding: 0 1rem; border: 2px #2f2d2e solid; width:50%; left:25%;">
     <div class="card-body">
       <form asp-controller="Pago" asp-action="Pagar">
-        <p class="card-title p-titulo">Pago</p>
+        <p class="card-title p-titulo" style="text-align: center;"><b>REALIZAR PAGO</b></p>
         <input type="hidden" asp-for="UserID" />
         <div class="form-group row">
-          <label asp-for="NombreTarjeta" class="control-label p-texto"></label>
+          <label asp-for="NombreTarjeta" class="control-label p-texto">Nombre del Titular</label>
           <input asp-for="NombreTarjeta" class="form-control"
-            style="border-radius: 30px; border: 1px #E38B29 solid; margin-top: 5px; padding-left: 15px; background-color: #F3E0B5;" />
+            style="border-radius: 30px; border: 1px #4d4c4b solid; margin-top: 5px; padding-left: 15px; background-color: #e6e6e6;" />
         </div>
         <div class="form-group row">
-          <label asp-for="NumeroTarjeta" class="control-label p-texto"></label>
+          <label asp-for="NumeroTarjeta" class="control-label p-texto">Numero de tarjeta</label>
           <input asp-for="NumeroTarjeta" class="form-control" data-inputmask="'mask': '9999-9999-9999-9999'"
-            style="border-radius: 30px; border: 1px #E38B29 solid; margin-top: 5px; padding-left: 15px; background-color: #F3E0B5;" />
+            style="border-radius: 30px; border: 1px #4d4c4b solid; margin-top: 5px; padding-left: 15px; background-color: #e6e6e6;" />
         </div>
         <div class="form-group row">
-          <label asp-for="DueDateYYMM" class="control-label p-texto"></label>
+          <label asp-for="DueDateYYMM" class="control-label p-texto">Mes/Año</label>
           <input asp-for="DueDateYYMM" class="form-control" data-inputmask="'mask': '99/99', 'placeholder': 'yy/mm'"
-            style="border-radius: 30px; border: 1px #E38B29 solid; margin-top: 5px; padding-left: 15px; background-color: #F3E0B5;" />
+            style="border-radius: 30px; border: 1px #4d4c4b solid; margin-top: 5px; padding-left: 15px; background-color: #e6e6e6;" />
         </div>
         <div class="form-group row">
-          <label asp-for="Cvv" class="control-label p-texto"></label>
+          <label asp-for="Cvv" class="control-label p-texto">CVV</label>
           <input asp-for="Cvv" class="form-control" data-inputmask="'mask': '999', 'placeholder': '999'"
-            style="border-radius: 30px; border: 1px #E38B29 solid; margin-top: 5px; padding-left: 15px; background-color: #F3E0B5;" />
+            style="border-radius: 30px; border: 1px #4d4c4b solid; margin-top: 5px; padding-left: 15px; background-color: #e6e6e6;" />
         </div>
         <div class="form-group row">
-          <label asp-for="MontoTotal" class="control-label p-texto"></label>
+          <label asp-for="MontoTotal" class="control-label p-texto">Monto Total</label>
           <input asp-for="MontoTotal" class="form-control" data-thousands="," data-decimal="."
-            style="border-radius: 30px; border: 1px #E38B29 solid; margin: 5px 0 25px; padding-left: 15px; background-color: #F3E0B5;" />
+            style="border-radius: 30px; border: 1px #4d4c4b solid; margin: 5px 0 25px; padding-left: 15px; background-color: #e6e6e6;" />
         </div>
         <hr class="linea">
         <div class="form-group" style="margin-top: 20px;">
@@ -54,16 +55,49 @@
             </div>
             <div class="col-6">
               <a asp-controller="Proforma" asp-action="Index" class="btn"
-                style="background-color: #F3E0B5; border-radius: 30px; 
-                                width: 100%; color: #444444; font-family: 'Rajdhani', sans-serif; font-size: 18px; font-weight: bold;">
+                style="background-color: #000000; border-radius: 30px; 
+                                width: 100%; color: #ffffff; font-family: 'Rajdhani', sans-serif; font-size: 18px; font-weight: bold;">
                 Regresar al Carrito</a>
             </div>
+
           </div>
+
         </div>
-      </form>
-      <h1>@ViewData["Message"]</h1>
-    </div>
+      </div>
+    </form>
   </div>
+
+  <script>
+
+document.querySelector('.card-number-input').oninput = () =>{
+    document.querySelector('.card-number-box').innerText = document.querySelector('.card-number-input').value;
+}
+
+document.querySelector('.card-holder-input').oninput = () =>{
+    document.querySelector('.card-holder-name').innerText = document.querySelector('.card-holder-input').value;
+}
+
+document.querySelector('.date-input').oninput = () =>{
+    document.querySelector('.exp-date').innerText = document.querySelector('.date-input').value;
+}
+
+document.querySelector('.cvv-input').onmouseenter = () =>{
+    document.querySelector('.front').style.transform = 'perspective(1000px) rotateY(-180deg)';
+    document.querySelector('.back').style.transform = 'perspective(1000px) rotateY(0deg)';
+}
+
+document.querySelector('.cvv-input').onmouseleave = () =>{
+    document.querySelector('.front').style.transform = 'perspective(1000px) rotateY(0deg)';
+    document.querySelector('.back').style.transform = 'perspective(1000px) rotateY(180deg)';
+}
+
+document.querySelector('.cvv-input').oninput = () =>{
+    document.querySelector('.cvv-box').innerText = document.querySelector('.cvv-input').value;
+}
+
+</script>
+
+  
 
 </body>
 <script src="https://kit.fontawesome.com/42be4397d3.js" crossorigin="anonymous"></script>

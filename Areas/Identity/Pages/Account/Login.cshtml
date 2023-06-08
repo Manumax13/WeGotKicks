@@ -13,72 +13,106 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
 </head>
 
-<style>
-    h4 {
-      font-size: 2rem; /* Cambiar tamaño de fuente */
-      font-family: Arial, sans-serif; /* Cambiar fuente de letra */
-      color: #6933ff; /* Cambiar color del texto */
-      text-shadow: 1px 1px #000000; /* Agregar sombra de texto */
-      text-transform: uppercase; /* Convertir texto a mayúsculas */
-      font-weight: bold;
-    }
-  </style>
 
-    <style>
-    /* Estilos para el contenedor */
-    #contenedor {
-      max-width: 9960px; /* Ancho máximo del contenedor */
-      margin: 0 auto; /* Centrar el contenedor horizontalmente */
-      text-align: center; /* Centrar el contenido dentro del contenedor */
-    }
-  </style>
+    <body>
 
-  <div class="cuerpo">
+    <div class="container-fluid ">
 
-    <body style="text-align: center;background-color: white;">
-    
-    <div id="contenedor" class="row columna">
-        <div class="col-md-4 objeto" style="background-color: #2e4057;">
-            <form id="account" method="post" class="formulario">
-                <h4 style="color: white;">INICIAR SESIÓN</h4>
-                <hr class="regla-horizontal">
-                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-                <div class="form-floating" style="margin-bottom: 1rem">
-                    <input asp-for="Input.Email" class="form-control" autocomplete="username" aria-required="true" />
-                    <label asp-for="Input.Email" class="form-label"></label>
-                    <span asp-validation-for="Input.Email" class="text-danger"></span>
+        <div class="row contenedor-total">
+            <div class="col-md-7 parte-imagen"></div>
+            <div class="col-md-5 parte-login">
+
+                <div class="row mt-5">
+                    <div class="col col-md-12"></div>
                 </div>
-                <div class="form-floating" style="margin-bottom: 1rem">
-                    <input asp-for="Input.Password" class="form-control" autocomplete="current-password"
-                        aria-required="true" />
-                    <label asp-for="Input.Password" class="form-label"></label>
-                    <span asp-validation-for="Input.Password" class="text-danger"></span>
-                </div>
-                <div style="margin-bottom: 1rem">
-                    <div class="checkbox">
-                        <label asp-for="Input.RememberMe" class="form-label" style="color: white;">
-                            <input class="form-check-input" asp-for="Input.RememberMe" style="margin-right: 10px;" />
-                            @Html.DisplayNameFor(m => m.Input.RememberMe)
-                        </label>
+
+                <div class="row mt-4">
+                    <div class="col col-md-2"></div>
+                    <div class="col col-md-8">
+                        <h1>Inicio de Sesión</h1>
                     </div>
+                    <div class="col col-md-2"></div>
                 </div>
-                <div style="margin-bottom: 2.5rem">
-                    <button id="login-submit" type="submit" class="w-100 btn btn-lg" style="background-color: #ffffff; font-weight: bold;">Ingresar</button>
 
+                <div class="row mt-3">
+                    <div class="col col-md-2"></div>
+                    <div class="col col-md-8">
+                        <p>Bienvenido Nuevamente! Por favor inicia sesión con tu cuenta.</p>
+                    </div>
+                    <div class="col col-md-2"></div>
                 </div>
-                <div>
-                    <p style="font-size: 15px">
-                        <a id="forgot-password" asp-page="./ForgotPassword" style="text-decoration: none">¿Olvidaste
-                            tu Contraseña?</a><br>
-                        <a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl"
-                            style="text-decoration: none">Registrar un Nuevo Usuario</a><br>
-                        <a id="resend-confirmation" asp-page="./ResendEmailConfirmation"
-                            style="text-decoration: none">Reenviar Correo de Confirmación</a><br>
-                    </p>
-                </div>
-            </form>
+
+                <form id="account" method="post" class="formulario">
+
+                    <div class="row mt-4">
+                        <div class="col col-md-2"></div>
+                        <div class="col col-md-8">
+                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                            <label asp-for="Input.Email" class="form-label"></label>
+                            <div class="form-floating" >
+                                <input asp-for="Input.Email" class="form-control" autocomplete="username" aria-required="true" />
+                                
+                                <span asp-validation-for="Input.Email" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="col col-md-2"></div>
+                    </div>
+
+                    <div class="row mt-4">
+                        <div class="col col-md-2"></div>
+                        <div class="col col-md-8">
+                                <label asp-for="Input.Password" class="form-label"></label>
+                            <div class="form-floating" >
+                                <input asp-for="Input.Password" class="form-control" autocomplete="current-password" aria-required="true" />
+                                
+                                <span asp-validation-for="Input.Password" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="col col-md-2"></div>
+                    </div>
+
+                    <div class="row mt-4">
+                        <div class="col col-md-2"></div>
+                        <div class="col col-md-4">
+                            <div class="checkbox">
+                                <label asp-for="Input.RememberMe" class="form-label" >
+                                <input class="form-check-input" asp-for="Input.RememberMe"  />
+                                @Html.DisplayNameFor(m => m.Input.RememberMe)
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="col col-md-4">
+                            <a id="forgot-password" asp-page="./ForgotPassword" >¿Olvidaste tu Contraseña?</a>
+                        </div>
+                        <div class="col col-md-2"></div>
+                    </div>
+
+                    <div class="row mt-4">
+                        <div class="col col-md-2"></div>
+                        <div class="col col-md-8">
+                            <div class="btn-login-container">
+                                <button id="login-submit" type="submit" class="w-100 btn btn-lg" >Ingresar</button>
+                            </div>
+                        </div>
+                        <div class="col col-md-2"></div>
+                    </div>
+
+                    <div class="row mt-4 mt-5">
+                        <div class="col col-md-2"></div>
+                        <div class="col col-md-8">
+                            <a id="newUser" asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl">Usuario Nuevo? <b>Registrarse</b></a>
+                        </div>
+                        <div class="col col-md-2"></div>
+                    </div>
+
+                </form>
+
+            </div>
         </div>
+
     </div>
+    
 
     @section Scripts {
     <partial name="_ValidationScriptsPartial" />
@@ -87,9 +121,9 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://kit.fontawesome.com/64b57b2524.js" crossorigin="anonymous"></script>
-</body>
+    </body>
 
-  </div>
+
 
 
 
