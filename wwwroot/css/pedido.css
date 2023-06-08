@@ -1,11 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
 
-.hola{
-    background-color: #2f2d2e;
-    color: white;
-    height: 75vh;
-}
-
 *{
     font-family: 'Poppins', sans-serif;
     margin:0; padding:0;
@@ -13,15 +7,17 @@
     outline: none; border: none;
     text-decoration: none;
     text-transform: uppercase;
-
 }
 
 .contenedor{
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.77), rgba(2, 2, 2, 0.874)), url(/images/fondopago.jpg);
+    background-size: cover;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-flow: column;
-    padding-bottom: 25px;
+    margin-bottom: 45px;
 }
 
 .contenedor form{
@@ -63,7 +59,7 @@
 
 .contenedor form .submit-btn{
     width: 100%;
-    background:linear-gradient(45deg, blueviolet, deeppink);
+    background:linear-gradient(45deg, #2e4057, #048ba8);
     margin-top: 20px;
     padding: 10px;
     font-size: 20px;
@@ -79,17 +75,18 @@
 }
 
 .contenedor .card-container{
-    margin-bottom: 0px;
+    margin-bottom: -150px;
     position: relative;
     height: 250px;
     width: 400px;
 }
 
 .contenedor .card-container .front{
+    position: absolute;
     height: 100%;
     width: 100%;
     top: 0; left: 0;
-    background:linear-gradient(45deg, #2e4057, #048ba8);
+    background:linear-gradient(45deg,  #2e4057, #048ba8);
     border-radius: 5px;
     backface-visibility: hidden;
     box-shadow: 0 15px 25px rgba(0,0,0,.2);
@@ -172,12 +169,4 @@
 .contenedor .card-container .back .box img{
     margin-top: 30px;
     height: 30px;
-}
-
-.monto{
-    background-color: transparent;
-    border: none;
-    outline: none;
-    color: white;
-    font-size: 60px;
 }

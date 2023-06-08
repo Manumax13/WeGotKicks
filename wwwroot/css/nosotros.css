@@ -1,50 +1,31 @@
-body {
-    background-color: white;
+body{
     overflow-x: hidden;
-    padding-bottom: 5%;
-    
 }
 
-h1{
-    text-align: center;
-}
-
-.imga {
-    width: 100%;
-    object-fit: cover;
-}
-
-.imagen-container {
-
-    width: 100%;
-    
-    margin: auto auto;
-}
-
-.componente{
-    background: linear-gradient(rgba(0, 0, 0, 0.401), rgba(2, 2, 2, 0.712)), url(/images/fondo1a.jpg);
-    background-size: cover;
-}
-
-.componente:last-child{
-    background: linear-gradient(rgba(0, 0, 0, 0.401), rgba(2, 2, 2, 0.712)), url(/images/fondo2a.jpeg);
-    background-size: cover;
-}
-
-.hola {
-
-    height: fit-content;
+.hola{
     background-color: #2f2d2e;
-    color: white;
 }
 
-h5{
-    font-size: 30px;
-
-    padding: 30px;
+.imagen{
+    background-color: #f18f01;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
 }
 
-h3 {
-    font-size: 40px;
-    padding: 30px;
+
+
+.imagen img{
+    height: 330px;
+    background-color: aqua;
+}
+
+
+
+h2{
+    font-size: 25px;
+    padding: 25px;
 }

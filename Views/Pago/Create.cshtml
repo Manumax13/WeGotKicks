@@ -11,64 +11,92 @@
   <link href="https://fonts.googleapis.com/css2?family=Rajdhani&family=Sacramento&display=swap" rel="stylesheet">
 </head>
 
+<body>
+  <div class="contenedor">
 
-<body class="cuerpo">
+    <div class="card-container">
 
-  <div class="card" style="border-radius: 30px; padding: 0 1rem; border: 2px #2f2d2e solid; width:50%; left:25%;">
-    <div class="card-body">
-      <form asp-controller="Pago" asp-action="Pagar">
-        <p class="card-title p-titulo" style="text-align: center;"><b>REALIZAR PAGO</b></p>
-        <input type="hidden" asp-for="UserID" />
-        <div class="form-group row">
-          <label asp-for="NombreTarjeta" class="control-label p-texto">Nombre del Titular</label>
-          <input asp-for="NombreTarjeta" class="form-control"
-            style="border-radius: 30px; border: 1px #4d4c4b solid; margin-top: 5px; padding-left: 15px; background-color: #e6e6e6;" />
-        </div>
-        <div class="form-group row">
-          <label asp-for="NumeroTarjeta" class="control-label p-texto">Numero de tarjeta</label>
-          <input asp-for="NumeroTarjeta" class="form-control" data-inputmask="'mask': '9999-9999-9999-9999'"
-            style="border-radius: 30px; border: 1px #4d4c4b solid; margin-top: 5px; padding-left: 15px; background-color: #e6e6e6;" />
-        </div>
-        <div class="form-group row">
-          <label asp-for="DueDateYYMM" class="control-label p-texto">Mes/Año</label>
-          <input asp-for="DueDateYYMM" class="form-control" data-inputmask="'mask': '99/99', 'placeholder': 'yy/mm'"
-            style="border-radius: 30px; border: 1px #4d4c4b solid; margin-top: 5px; padding-left: 15px; background-color: #e6e6e6;" />
-        </div>
-        <div class="form-group row">
-          <label asp-for="Cvv" class="control-label p-texto">CVV</label>
-          <input asp-for="Cvv" class="form-control" data-inputmask="'mask': '999', 'placeholder': '999'"
-            style="border-radius: 30px; border: 1px #4d4c4b solid; margin-top: 5px; padding-left: 15px; background-color: #e6e6e6;" />
-        </div>
-        <div class="form-group row">
-          <label asp-for="MontoTotal" class="control-label p-texto">Monto Total</label>
-          <input asp-for="MontoTotal" class="form-control" data-thousands="," data-decimal="."
-            style="border-radius: 30px; border: 1px #4d4c4b solid; margin: 5px 0 25px; padding-left: 15px; background-color: #e6e6e6;" />
-        </div>
-        <hr class="linea">
-        <div class="form-group" style="margin-top: 20px;">
-          <div class="row">
-            <div class="col-6">
-              <button type="submit" class="btn"
-                style="background-color: #000000; border-radius: 30px; 
-                                width: 100%; color: white; font-family: 'Rajdhani', sans-serif; font-size: 18px; font-weight: bold;">
-                Pagar</button>
+        <div class="front">
+            <div class="image">
+                <img src="/images/chip.png" alt="">
+                <img src="/images/visa.png" alt="">
             </div>
-            <div class="col-6">
-              <a asp-controller="Proforma" asp-action="Index" class="btn"
-                style="background-color: #000000; border-radius: 30px; 
-                                width: 100%; color: #ffffff; font-family: 'Rajdhani', sans-serif; font-size: 18px; font-weight: bold;">
-                Regresar al Carrito</a>
+            <div class="card-number-box">################</div>
+            <div class="flexbox">
+                <div class="box">
+                    <span>card holder</span>
+                    <div class="card-holder-name">full name</div>
+                </div>
+                <div class="box">
+                    <span>expires</span>
+                    <div class="expiration">
+                        <span class="exp-date">mm/yy</span>
+                    </div>
+                </div>
             </div>
-
-          </div>
-
         </div>
-        </form>
-      </div>
+
+        <div class="back">
+            <div class="stripe"></div>
+            <div class="box">
+                <span>cvv</span>
+                <div class="cvv-box"></div>
+                <img src="image/visa.png" alt="">
+            </div>
+        </div>
+
+    </div>
+
     
-  </div>
 
-  <script>
+    <form asp-controller="Pago" asp-action="Pagar">
+        <input type="hidden" asp-for="UserID" />
+
+        <div class="row">
+            <div class="col col-md-7">
+                <div class="inputBox form-group">
+                    <h4>El total a pagar es de:</h4>
+                    
+                </div>
+            </div>
+
+            <div class="col col-md-5">
+                
+                <input asp-for="MontoTotal" data-thousands="," data-decimal="."
+                    style="border: none;font-size: 40px;text-align: center;width: 150px;"/>
+            </div>
+        </div>
+
+        
+
+
+
+        <div class="inputBox form-group">
+            <label asp-for="NumeroTarjeta" class="control-label p-texto">Numero de tarjeta</label>
+          <input asp-for="NumeroTarjeta" class="form-control card-number-input" data-inputmask="'mask': '9999-9999-9999-9999'"/>
+        </div>
+        <div class="inputBox form-group">
+            <label asp-for="NombreTarjeta" class="control-label p-texto">Nombre del Titular</label>
+          <input asp-for="NombreTarjeta" class="form-control card-holder-input"/>
+        </div>
+        <div class="flexbox">
+            <div class="inputBox">
+                <label asp-for="DueDateYYMM" class="control-label p-texto">Mes/Año</label>
+          <input asp-for="DueDateYYMM" class="form-control date-input" data-inputmask="'mask': '99/99', 'placeholder': 'yy/mm'"/>
+            </div>
+
+            <div class="inputBox form-group">
+                <label asp-for="Cvv" class="control-label p-texto">CVV</label>
+                <input asp-for="Cvv" class="form-control cvv-input" data-inputmask="'mask': '999', 'placeholder': '999'"/>
+            </div>
+        </div>
+        
+        <a asp-controller="Proforma" asp-action="Index" class="btn submit-btn">Regresar al Carrito</a>
+        <button type="submit" class="btn submit-btn">PAGAR</button>
+    </form>
+
+</div> 
+<script>
 
 document.querySelector('.card-number-input').oninput = () =>{
     document.querySelector('.card-number-box').innerText = document.querySelector('.card-number-input').value;
@@ -97,10 +125,10 @@ document.querySelector('.cvv-input').oninput = () =>{
 }
 
 </script>
-
-  
-
 </body>
+
+
+
 <script src="https://kit.fontawesome.com/42be4397d3.js" crossorigin="anonymous"></script>
 
 </html>
