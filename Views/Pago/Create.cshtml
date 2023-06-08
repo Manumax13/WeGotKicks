@@ -59,12 +59,46 @@
                                 width: 100%; color: #ffffff; font-family: 'Rajdhani', sans-serif; font-size: 18px; font-weight: bold;">
                 Regresar al Carrito</a>
             </div>
+
           </div>
+
         </div>
-      </form>
-      <h1>@ViewData["Message"]</h1>
-    </div>
+        </form>
+      </div>
+    
   </div>
+
+  <script>
+
+document.querySelector('.card-number-input').oninput = () =>{
+    document.querySelector('.card-number-box').innerText = document.querySelector('.card-number-input').value;
+}
+
+document.querySelector('.card-holder-input').oninput = () =>{
+    document.querySelector('.card-holder-name').innerText = document.querySelector('.card-holder-input').value;
+}
+
+document.querySelector('.date-input').oninput = () =>{
+    document.querySelector('.exp-date').innerText = document.querySelector('.date-input').value;
+}
+
+document.querySelector('.cvv-input').onmouseenter = () =>{
+    document.querySelector('.front').style.transform = 'perspective(1000px) rotateY(-180deg)';
+    document.querySelector('.back').style.transform = 'perspective(1000px) rotateY(0deg)';
+}
+
+document.querySelector('.cvv-input').onmouseleave = () =>{
+    document.querySelector('.front').style.transform = 'perspective(1000px) rotateY(0deg)';
+    document.querySelector('.back').style.transform = 'perspective(1000px) rotateY(180deg)';
+}
+
+document.querySelector('.cvv-input').oninput = () =>{
+    document.querySelector('.cvv-box').innerText = document.querySelector('.cvv-input').value;
+}
+
+</script>
+
+  
 
 </body>
 <script src="https://kit.fontawesome.com/42be4397d3.js" crossorigin="anonymous"></script>
