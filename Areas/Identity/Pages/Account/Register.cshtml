@@ -13,57 +13,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="~/css/login.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/register.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
 </head>
 
-<style>
-    h4 {
-      font-size: 2rem; /* Cambiar tamaño de fuente */
-      font-family: Arial, sans-serif; /* Cambiar fuente de letra */
-      color: #6933ff; /* Cambiar color del texto */
-      text-shadow: 1px 1px #000000; /* Agregar sombra de texto */
-      text-transform: uppercase; /* Convertir texto a mayúsculas */
-      font-weight: bold;
-    }
-</style>
+
 
 <body style="overflow-x: hidden;">
-    
-    <div class="cuerpo">
-        <div class="row columna" style="margin-top: 2px;">
-        <div class="col-md-4 objeto" style="background-color: #2e4057;">
-            <form id="registerForm" asp-route-returnUrl="@Model.ReturnUrl" method="post">
-                <h4 style="color: white;">Registrate</h4>
-                <hr class="regla-horizontal">
-                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-                <div class="form-floating" style="margin-bottom: 1rem">
-                    <input asp-for="Input.Email" class="form-control" autocomplete="username" aria-required="true" />
-                    <label asp-for="Input.Email" class="form-label"></label>
-                    <span asp-validation-for="Input.Email" class="text-danger"></span>
-                </div>
-                <div class="form-floating" style="margin-bottom: 1rem">
-                    <input asp-for="Input.Password" class="form-control" autocomplete="new-password"
-                        aria-required="true" />
-                    <label asp-for="Input.Password"></label>
-                    <span asp-validation-for="Input.Password" class="text-danger"></span>
-                </div>
-                <div class="form-floating" style="margin-bottom: 1rem">
-                    <input asp-for="Input.ConfirmPassword" class="form-control" autocomplete="new-password"
-                        aria-required="true" />
-                    <label asp-for="Input.ConfirmPassword"></label>
-                    <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
-                </div>
-                <hr class="regla-horizontal">
-                <div style="margin-bottom: 2.5rem">
-                    <button id="registerSubmit" type="submit" class="w-100 btn btn-lg" style="background-color: #ffffff; font-weight: bold;">Registrarse</button>
 
+    <div class="row">
+
+        <div class="col col-md-5" style="background-color: #d29232;">
+            <form id="registerForm" asp-route-returnUrl="@Model.ReturnUrl" method="post">
+                
+                <div class="row mx-5 mt-5 mb-1">
+                    <h4 style="color: #2f2d2e;font-size: 45px;margin-bottom: 50px;font-weight: 600;">Registrate</h4>
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                 </div>
+                <div class="row mx-5 my-">
+                        <label asp-for="Input.Email" class="form-label"></label>
+                        <input asp-for="Input.Email" class="form-control" autocomplete="username" aria-required="true" />
+                        <span asp-validation-for="Input.Email" class="text-danger"></span>
+                </div>
+
+                <div class="row mx-5 my-3">
+                        <label asp-for="Input.Password"></label>
+                        <input asp-for="Input.Password" class="form-control" autocomplete="new-password"
+                        aria-required="true" />
+                        <span asp-validation-for="Input.Password" class="text-danger"></span>
+                </div>
+
+                <div class="row mx-5 mt-2 mb-5">
+                        <label asp-for="Input.ConfirmPassword"></label>
+                        <input asp-for="Input.ConfirmPassword" class="form-control" autocomplete="new-password"
+                        aria-required="true" />
+                        <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
+                </div>
+                <br>
+                <div class="row mx-5 mt-4 mb-5">
+                       <button id="registerSubmit" type="submit" class="w-100 btn" style="background-color: #2f2d2e; font-weight: bold;height: 60px;color: white;font-size: 30px;">Registrarse</button> 
+                </div>
+
+
+
             </form>
         </div>
-    </div>
 
-    @section Scripts {
+        <div class="col col-md-7 imagen">
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        </div>
+
+        @section Scripts {
     <partial name="_ValidationScriptsPartial" />
     }
 
@@ -73,7 +73,6 @@
 
     </div>
 
-    
 </body>
 
 </html>

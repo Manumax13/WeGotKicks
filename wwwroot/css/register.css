@@ -1,0 +1,14 @@
+.imagen{
+    background: linear-gradient(rgba(0, 0, 0, 0.39), rgba(2, 2, 2, 0.556)), url(/Images/fondoRegister.jpg);
+    background-size: cover;
+}
+
+label{
+    font-size: 20px;
+    color: aliceblue;
+    padding-bottom: 20px;
+}
+
+input{
+    font-size: 20px;
+}
