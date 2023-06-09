@@ -5,7 +5,7 @@
 }
 
 .parte-imagen{
-    background: linear-gradient(rgba(0, 0, 0, 0.39), rgba(2, 2, 2, 0.556)), url(/images/fondoLogin.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.39), rgba(2, 2, 2, 0.556)), url(/Images/fondoLogin.jpg);
     background-size: cover;
     background-position: right;
 }

@@ -11,7 +11,7 @@
 
 .contenedor{
     min-height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.77), rgba(2, 2, 2, 0.874)), url(/images/fondopago.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.77), rgba(2, 2, 2, 0.874)), url(/Images/fondopago.jpg);
     background-size: cover;
     display: flex;
     align-items: center;

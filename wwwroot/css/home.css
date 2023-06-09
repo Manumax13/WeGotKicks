@@ -4,7 +4,7 @@ body {
 
 .inicio {
 
-    background: linear-gradient(rgba(0, 0, 0, 0.767), rgba(2, 2, 2, 0.712)), url(/images/fondo3.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.767), rgba(2, 2, 2, 0.712)), url(/Images/fondo3.jpg);
     height: 100%;
     background-size: cover;
     background-position: center center;
