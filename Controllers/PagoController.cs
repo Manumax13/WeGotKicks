@@ -14,6 +14,9 @@ using Microsoft.EntityFrameworkCore;
 using OfficeOpenXml;
 using OfficeOpenXml.Table;
 using Rotativa.AspNetCore;
+using System.Text.Json.Serialization;
+using Newtonsoft.Json;
+
 namespace WeGotKicks.Controllers
 {
    
@@ -171,6 +174,35 @@ namespace WeGotKicks.Controllers
 
                 return File(libro.GetAsByteArray(), excelContentType, "Pagos.xlsx");
             }
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> PruebaApi(string selectedValue,int montoTotal){
+
+            var urlPrueba= "https://currency-converter-exchange-rates1.p.rapidapi.com/convert?amount="+montoTotal+".00&from=PEN&to="+"USD";
+            Console.WriteLine(urlPrueba);
+            var client = new HttpClient();
+            var request = new HttpRequestMessage
+            {
+                Method = HttpMethod.Get,
+                RequestUri = new Uri(urlPrueba),
+                Headers =
+                {
+                    { "X-RapidAPI-Key", "79d5f81580mshe9ae6bcce5e7f46p1494d1jsn2a995efb82a5" },
+                    { "X-RapidAPI-Host", "currency-converter-exchange-rates1.p.rapidapi.com" },
+                },
+            };
+            using (var response = await client.SendAsync(request))
+            {
+                response.EnsureSuccessStatusCode();
+                var body = await response.Content.ReadAsStringAsync();
+                dynamic json = JsonConvert.DeserializeObject(body);
+                Console.WriteLine(json);
+                ViewBag.montoTransformado=json.result;
+            }
+            Console.WriteLine("hola");
+
+            return View("Create");
         }
     }
 }
