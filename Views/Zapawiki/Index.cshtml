@@ -1,5 +1,20 @@
-<h1>Información de la Zapatilla</h1>
+<div class="container-fluid">
+      <div class="row my-4" style="text-align: center;">
+         <h1>Información de la Zapatilla</h1>
+      </div>
+      <div class="row mb-4" style="height: 70vh; background: linear-gradient(180deg, rgba(4,139,168,1) 0%, rgba(46,64,87,1) 100%);">
+          <div class="col col-md-6" style="display: flex;justify-content: center;align-items: center;">
+            <p style="width: 70%;color: white;font-size: medium;">@ViewBag.DescripcionZapatilla</p>
+          </div>
+  
+          <div class="col col-md-6" style="display: flex;justify-content: center;align-items: center;">
+                      <img style="width: 85%;" src="@ViewBag.ImagenZapatilla" alt="Imagen de Zapatilla"/>
+          </div>
+  
+      </div>
+    </div>
 
-<img src="@ViewBag.ImagenZapatilla" alt="Imagen de Zapatilla" />
 
-<p>@ViewBag.DescripcionZapatilla</p>
+
+
+
