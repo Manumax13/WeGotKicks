@@ -28,7 +28,7 @@ namespace WeGotKicks.Controllers
             RequestUri = new Uri("https://shoes-collections.p.rapidapi.com/shoes"),
             Headers =
             {
-              { "X-RapidAPI-Key", "77fc18d8a9msh3eee77069f0cf92p1d2fecjsn8d66d0d39fe2" },
+              { "X-RapidAPI-Key", "4d32f0438cmsh870e5849edb358bp17c191jsn1833dd5078fe" },
               { "X-RapidAPI-Host", "shoes-collections.p.rapidapi.com" },
             },
           };
